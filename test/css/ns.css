@@ -1,0 +1,165 @@
+html{
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body{
+    width:80%;
+    max-width: 2000px;
+    background-color: white;
+    margin:15px auto;
+    padding:10px;
+}
+
+h1, h2, h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1{
+    font-size:3em;
+    color:darkslategrey;
+}
+
+h2{
+    font-size: 2em;
+    color:darkslategrey;
+}
+
+h3{
+    font-size:1.3em;
+    color:rgb(67, 73, 67);
+}
+
+.btn{
+    box-sizing: border-box;
+    display: inline-block;
+    width:100%;
+    border:none;
+    background-color:#e0b722;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:1.5em;
+    margin-top:10px;
+    text-align: center;
+    transition: all .5s;
+    cursor: pointer;
+    padding:20px;
+}
+
+.btn:hover{
+    background-color:#bd9811;
+}
+
+
+/*the container must be positioned relative:*/
+.autocomplete {
+    position: relative;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+  }
+  
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 1.2em;
+  }
+  
+  input[type=text] {
+    background-color: #f7d417;
+    width:100%;
+    float:left;
+    transition: 0.5s;
+    box-sizing: border-box;
+  }
+   
+  #submit_btn{
+    width:10%;
+    background-color: #00387b;
+    color:white;
+    border:none;
+    padding:10px;
+    display:none;
+    position: absolute;
+    top:0;  
+    bottom:0;
+    right:0;  
+    -webkit-animation: fadefromright 0.5s;
+    animation:fadefromright 0.5s;
+    transition: 0.5s;
+    font-size:1.2em;
+  }
+
+  @-webkit-keyframes fadefromright{
+    from {width:0%; opacity: 0;}
+    to {width:10%; opacity: 1;}
+  }
+
+  @keyframes fadefromright{
+    from {width:0%; opacity: 0;}
+    to {width:10%; opacity: 1;}
+  }
+
+  #submit_btn:hover{
+      background-color:#0053b7;
+  }
+
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 1000px;
+    overflow: scroll;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+  }
+  
+  /*when hovering an item:*/
+  .autocomplete-items div:hover {
+    background-color: #00387b; 
+    color:white;
+  }
+  
+  /*when navigating through the items using the arrow keys:*/
+  .autocomplete-active {
+    background-color: #00387b !important; 
+    color: white	; 
+    
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:orange; 
+  }
